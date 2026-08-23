@@ -1,0 +1,91 @@
+[0.000000] (-) TimerEvent: {}
+[0.003860] (irocu_vio_bridge) JobQueued: {'identifier': 'irocu_vio_bridge', 'dependencies': OrderedDict()}
+[0.003999] (irocu_vio_bridge) JobStarted: {'identifier': 'irocu_vio_bridge'}
+[0.099634] (-) TimerEvent: {}
+[0.201205] (-) TimerEvent: {}
+[0.304839] (-) TimerEvent: {}
+[0.408359] (-) TimerEvent: {}
+[0.509341] (-) TimerEvent: {}
+[0.609704] (-) TimerEvent: {}
+[0.710732] (-) TimerEvent: {}
+[0.817863] (-) TimerEvent: {}
+[0.918971] (-) TimerEvent: {}
+[1.021560] (-) TimerEvent: {}
+[1.123382] (-) TimerEvent: {}
+[1.227392] (-) TimerEvent: {}
+[1.327864] (-) TimerEvent: {}
+[1.430132] (-) TimerEvent: {}
+[1.532218] (-) TimerEvent: {}
+[1.632582] (-) TimerEvent: {}
+[1.737061] (-) TimerEvent: {}
+[1.838213] (-) TimerEvent: {}
+[1.939299] (-) TimerEvent: {}
+[2.039797] (-) TimerEvent: {}
+[2.140532] (-) TimerEvent: {}
+[2.241354] (-) TimerEvent: {}
+[2.342796] (-) TimerEvent: {}
+[2.445561] (-) TimerEvent: {}
+[2.545983] (-) TimerEvent: {}
+[2.653607] (-) TimerEvent: {}
+[2.755132] (-) TimerEvent: {}
+[2.857505] (-) TimerEvent: {}
+[2.961175] (-) TimerEvent: {}
+[2.988415] (irocu_vio_bridge) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ubuntu/irocu_ws/build/irocu_vio_bridge/build', '--no-deps', 'symlink_data'], 'cwd': '/home/ubuntu/irocu_ws/build/irocu_vio_bridge', 'env': {'MAIL': '/var/mail/ubuntu', 'USER': 'ubuntu', 'SSH_CLIENT': '100.112.106.106 54226 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ubuntu/drone_ws/install/px4_msgs/lib:/home/ubuntu/ros2_ws/install/realsense2_camera/lib:/home/ubuntu/ros2_ws/install/realsense2_camera_msgs/lib:/home/ubuntu/ros2_ws/install/ov_msckf/lib:/home/ubuntu/ros2_ws/install/ov_init/lib:/home/ubuntu/ros2_ws/install/ov_eval/lib:/home/ubuntu/ros2_ws/install/ov_core/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu', 'SSH_TTY': '/dev/pts/12', 'HUSHLOGIN': 'FALSE', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'PYTHONNOUSERSITE': '1', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/ubuntu/drone_ws/install:/home/ubuntu/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '31', 'PATH': '/home/ubuntu/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'REMOTEHOST': '100.112.106.106', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/ubuntu/drone_ws/install/px4_vio_control:/home/ubuntu/drone_ws/install/px4_msgs:/home/ubuntu/ros2_ws/install/realsense2_rviz_plugin:/home/ubuntu/ros2_ws/install/realsense2_ros_mqtt_bridge:/home/ubuntu/ros2_ws/install/realsense2_description:/home/ubuntu/ros2_ws/install/realsense2_camera:/home/ubuntu/ros2_ws/install/realsense2_camera_msgs:/home/ubuntu/ros2_ws/install/ov_msckf:/home/ubuntu/ros2_ws/install/ov_init:/home/ubuntu/ros2_ws/install/ov_eval:/home/ubuntu/ros2_ws/install/ov_data:/home/ubuntu/ros2_ws/install/ov_core:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ubuntu/irocu_ws/build/irocu_vio_bridge', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '100.112.106.106 54226 100.119.173.111 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/ubuntu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/irocu_ws/build/irocu_vio_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages:/home/ubuntu/drone_ws/install/px4_vio_control/lib/python3.12/site-packages:/home/ubuntu/drone_ws/install/px4_msgs/lib/python3.12/site-packages:/home/ubuntu/ros2_ws/build/realsense2_ros_mqtt_bridge:/home/ubuntu/ros2_ws/install/realsense2_ros_mqtt_bridge/lib/python3.12/site-packages:/home/ubuntu/ros2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ubuntu/drone_ws/install/px4_msgs:/home/ubuntu/ros2_ws/install/realsense2_rviz_plugin:/home/ubuntu/ros2_ws/install/realsense2_description:/home/ubuntu/ros2_ws/install/realsense2_camera:/home/ubuntu/ros2_ws/install/realsense2_camera_msgs:/home/ubuntu/ros2_ws/install/ov_msckf:/home/ubuntu/ros2_ws/install/ov_init:/home/ubuntu/ros2_ws/install/ov_eval:/home/ubuntu/ros2_ws/install/ov_data:/home/ubuntu/ros2_ws/install/ov_core:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[3.064989] (-) TimerEvent: {}
+[3.165422] (-) TimerEvent: {}
+[3.266665] (-) TimerEvent: {}
+[3.367835] (-) TimerEvent: {}
+[3.470772] (-) TimerEvent: {}
+[3.571594] (-) TimerEvent: {}
+[3.673027] (-) TimerEvent: {}
+[3.773431] (-) TimerEvent: {}
+[3.873779] (-) TimerEvent: {}
+[3.974376] (-) TimerEvent: {}
+[4.058229] (irocu_vio_bridge) StdoutLine: {'line': b'running develop\n'}
+[4.074693] (-) TimerEvent: {}
+[4.182427] (-) TimerEvent: {}
+[4.283880] (-) TimerEvent: {}
+[4.385920] (-) TimerEvent: {}
+[4.489812] (-) TimerEvent: {}
+[4.590378] (-) TimerEvent: {}
+[4.692442] (-) TimerEvent: {}
+[4.735799] (irocu_vio_bridge) StdoutLine: {'line': b'running egg_info\n'}
+[4.792586] (-) TimerEvent: {}
+[4.863590] (irocu_vio_bridge) StdoutLine: {'line': b'writing irocu_vio_bridge.egg-info/PKG-INFO\n'}
+[4.865180] (irocu_vio_bridge) StdoutLine: {'line': b'writing dependency_links to irocu_vio_bridge.egg-info/dependency_links.txt\n'}
+[4.865641] (irocu_vio_bridge) StdoutLine: {'line': b'writing entry points to irocu_vio_bridge.egg-info/entry_points.txt\n'}
+[4.865882] (irocu_vio_bridge) StdoutLine: {'line': b'writing requirements to irocu_vio_bridge.egg-info/requires.txt\n'}
+[4.867199] (irocu_vio_bridge) StdoutLine: {'line': b'writing top-level names to irocu_vio_bridge.egg-info/top_level.txt\n'}
+[4.893827] (-) TimerEvent: {}
+[4.980015] (irocu_vio_bridge) StdoutLine: {'line': b"reading manifest file 'irocu_vio_bridge.egg-info/SOURCES.txt'\n"}
+[4.982146] (irocu_vio_bridge) StdoutLine: {'line': b"writing manifest file 'irocu_vio_bridge.egg-info/SOURCES.txt'\n"}
+[4.994217] (-) TimerEvent: {}
+[5.047971] (irocu_vio_bridge) StdoutLine: {'line': b'running build_ext\n'}
+[5.051804] (irocu_vio_bridge) StdoutLine: {'line': b'Creating /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu-vio-bridge.egg-link (link to .)\n'}
+[5.054948] (irocu_vio_bridge) StdoutLine: {'line': b'Installing control_server script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.056815] (irocu_vio_bridge) StdoutLine: {'line': b'Installing dashboard_agent script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.057755] (irocu_vio_bridge) StdoutLine: {'line': b'Installing downward_camera_publisher script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.057881] (irocu_vio_bridge) StdoutLine: {'line': b'Installing image_capture_sender_node script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.057981] (irocu_vio_bridge) StdoutLine: {'line': b'Installing image_capture_sender_topic_node script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.058072] (irocu_vio_bridge) StdoutLine: {'line': b'Installing ov_to_vio script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.058167] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase2_health_check script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.058295] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase2_takeoff_land script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.060986] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_aruco_detector script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.063584] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_aruco_detector_custom script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.063805] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_keyboard_control script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.063950] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_keyboard_rth script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.064101] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_keyboard_rth_aruco script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.064264] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_keyboard_rth_aruco_offset script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.066476] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_lawnmower_aruco script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.066767] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_lawnmower_path script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.066920] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_square_path script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.067035] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_square_yaw_hold script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.067144] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_velocity_test script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[5.067240] (irocu_vio_bridge) StdoutLine: {'line': b'\n'}
+[5.067372] (irocu_vio_bridge) StdoutLine: {'line': b'Installed /home/ubuntu/irocu_ws/build/irocu_vio_bridge\n'}
+[5.067473] (irocu_vio_bridge) StdoutLine: {'line': b'running symlink_data\n'}
+[5.094399] (-) TimerEvent: {}
+[5.195638] (-) TimerEvent: {}
+[5.247492] (irocu_vio_bridge) CommandEnded: {'returncode': 0}
+[5.289813] (irocu_vio_bridge) JobEnded: {'identifier': 'irocu_vio_bridge', 'rc': 0}
+[5.295053] (-) EventReactorShutdown: {}

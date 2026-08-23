@@ -1,0 +1,552 @@
+PROJECT: ISRO Robotics Challenge Autonomous Drone System
+
+USER / TEAM CONTEXT:
+- User: Ritesh
+- Goal: Build an autonomous drone for ISRO Robotics Challenge / IROCU 2026.
+- Current focus: Indoor autonomous drone navigation using D455 odometry and ArduPilot.
+
+HARDWARE:
+- Pixhawk Cube Orange
+- ArduPilot
+- Raspberry Pi 5 8GB
+- Intel RealSense D455
+- 3DR radio telemetryros2 topic list | grep /mavros/odometryros2 topic list | grep /mavros/odometry
+
+SOFTWARE:
+- Ubuntu 24.04
+- ROS 2 Jazzy
+- RealSense ROS 2 wrapper
+- RTAB-Map RGB-D odometry
+- imu_filter_madgwick
+- Future: MAVROS for Pixhawk/ArduPilot integration
+
+
+MISSION PHASES:
+
+Phase 1: Test VIO / Odometry from D455
+Output: stable /vio/odometry
+
+Phase 2: Takeoff, Hover, and Land
+Output: drone can arm, takeoff, hover, and land safely using odometry
+
+Phase 3: Velocity Movement
+Output: drone can move using vx, vy, vz, and yaw-rate commands
+
+Phase 4: Lawnmower / Grid Search Movement
+Output: drone can scan the arena in a grid pattern
+
+Phase 5: Target Image Detection
+Output: detect 3 target locations from seed / low-resolution images
+
+Phase 6: HD Capture
+Output: capture sharp HD images of detected targets with coordinates
+
+Phase 7: Return to Base
+Output: drone returns to starting point
+
+Phase 8: Final Landing
+Output: drone lands and disarms safely
+
+Phase 9: Charging / Docking
+Output: drone charges after landing, manual or autonomous depending on hardware
+
+Phase 10: Data Transfer
+Output: transfer HD images, coordinates, mission summary, and logs
+
+
+CURRENT PHASE STATUS:
+
+Phase 1 is now complete.
+
+Final Phase 1 stack:
+
+RealSense D455 RGB + aligned depth + IMU
+        ↓
+Madgwick IMU filter
+        ↓
+RTAB-Map rgbd_odometry
+        ↓
+/vio/odometry
+
+Important note:
+- This is technically RGB-D visual odometry with filtered IMU orientation support.
+- It is not full tightly-coupled IMU VIO like OpenVINS or T265.
+- For the project pipeline, the output is named /vio/odometry.
+
+
+OPENVINS HISTORY:
+
+Initial approach:
+- Tried OpenVINS with D455 camera + IMU.
+
+OpenVINS was abandoned because odometry diverged badly.
+
+OpenVINS problems observed:
+- First output had position in lakhs of meters and velocity in thousands of m/s.
+- After fixing camera intrinsics, it still gave bad output:
+  x around 101 m
+  y around 286 m
+  z around -34 m
+  velocity z around 42 m/s
+
+Decision:
+- Do not use OpenVINS for now.
+- Use RTAB-Map RGB-D odometry + filtered IMU instead.
+
+
+REALSENSE TOPIC NAMESPACE:
+
+The D455 topics are under:
+
+/camera/d455/...
+
+Important topics:
+
+/camera/d455/color/image_raw
+/camera/d455/color/camera_info
+/camera/d455/aligned_depth_to_color/image_raw
+/camera/d455/imu
+/camera/d455/imu_filtered
+/vio/odometry
+
+
+REALSENSE RESOLUTION:
+
+The color camera is running at:
+
+width: 640
+height: 480
+
+Attempts to force 848x480 were not successful, so the system now uses:
+
+rgb_camera.color_profile:=640x480x30
+depth_module.depth_profile:=640x480x30
+
+
+REALSENSE CAMERA CALIBRATION CAPTURED:
+
+From /camera/d455/color/camera_info:
+
+height: 480
+width: 640
+distortion_model: plumb_bob
+
+d:
+- -0.05708256736397743
+- 0.06678491085767746
+- 0.0004551484016701579
+- -4.7503304813290015e-05
+- -0.021315189078450203
+
+k:
+- 382.5838623046875
+- 0.0
+- 318.1744689941406
+- 0.0
+- 382.13629150390625
+- 251.32058715820312
+- 0.0
+- 0.0
+- 1.0
+
+Extracted camera intrinsics:
+fx = 382.5838623046875
+fy = 382.13629150390625
+cx = 318.1744689941406
+cy = 251.32058715820312
+
+Distortion first 4:
+k1 = -0.05708256736397743
+k2 = 0.06678491085767746
+p1 = 0.0004551484016701579
+p2 = -0.000047503304813290015
+
+This calibration was mainly used during OpenVINS debugging.
+Current RTAB-Map uses /camera/d455/color/camera_info directly.
+
+
+FINAL WORKING PHASE 1 COMMANDS:
+
+Run these in 4 different terminals.
+
+TERMINAL 1: D455 RGB + DEPTH + IMU
+
+source /opt/ros/jazzy/setup.bash
+
+pkill -f realsense2_camera
+
+ros2 launch realsense2_camera rs_launch.py \
+  camera_namespace:=camera \
+  camera_name:=d455 \
+  enable_color:=true \
+  enable_depth:=true \
+  enable_infra1:=false \
+  enable_infra2:=false \
+  enable_gyro:=true \
+  enable_accel:=true \
+  unite_imu_method:=2 \
+  align_depth.enable:=true \
+  enable_sync:=true \
+  rgb_camera.color_profile:=640x480x30 \
+  depth_module.depth_profile:=640x480x30 \
+  rgb_camera.color_format:=RGB8 \
+  gyro_fps:=400 \
+  accel_fps:=250
+
+
+TERMINAL 2: IMU ORIENTATION FILTER
+
+source /opt/ros/jazzy/setup.bash
+
+ros2 run imu_filter_madgwick imu_filter_madgwick_node --ros-args \
+  -p use_mag:=false \
+  -p publish_tf:=false \
+  -p world_frame:="enu" \
+  -r imu/data_raw:=/camera/d455/imu \
+  -r imu/data:=/camera/d455/imu_filtered
+
+
+TERMINAL 3: RGB-D ODOMETRY + FILTERED IMU
+
+source /opt/ros/jazzy/setup.bash
+
+ros2 run rtabmap_odom rgbd_odometry --ros-args \
+  -p frame_id:=d455_link \
+  -p publish_tf:=false \
+  -p approx_sync:=true \
+  -p queue_size:=50 \
+  -p wait_imu_to_init:=true \
+  -p always_check_imu_tf:=false \
+  -p Odom/Strategy:="'0'" \
+  -p Odom/ResetCountdown:="'1'" \
+  -p Odom/GuessMotion:="'true'" \
+  -p OdomF2M/MaxSize:="'1000'" \
+  -p Vis/MinInliers:="'25'" \
+  -p Vis/InlierDistance:="'0.05'" \
+  -p Vis/MaxFeatures:="'1000'" \
+  -p RGBD/OptimizeMaxError:="'2.0'" \
+  -r rgb/image:=/camera/d455/color/image_raw \
+  -r depth/image:=/camera/d455/aligned_depth_to_color/image_raw \
+  -r rgb/camera_info:=/camera/d455/color/camera_info \
+  -r imu:=/camera/d455/imu_filtered \
+  -r odom:=/vio/odometry
+
+
+TERMINAL 4: CHECK ODOMETRY
+
+source /opt/ros/jazzy/setup.bash
+
+ros2 topic hz /vio/odometry
+
+ros2 topic echo --once /vio/odometry
+
+
+EXTRA CHECKS:
+
+ros2 topic list | grep /camera/d455
+
+ros2 topic hz /camera/d455/color/image_raw
+
+ros2 topic hz /camera/d455/aligned_depth_to_color/image_raw
+
+ros2 topic hz /camera/d455/imu
+
+ros2 topic hz /camera/d455/imu_filtered
+
+ros2 topic echo --once /camera/d455/imu_filtered
+
+
+FALLBACK RGB-D ONLY ODOMETRY:
+
+Use this only if the IMU version creates issues.
+Run this in Terminal 3 instead of the IMU odometry command.
+
+source /opt/ros/jazzy/setup.bash
+
+ros2 run rtabmap_odom rgbd_odometry --ros-args \
+  -p frame_id:=d455_link \
+  -p publish_tf:=false \
+  -p approx_sync:=true \
+  -p queue_size:=50 \
+  -p Odom/Strategy:="'0'" \
+  -p Odom/ResetCountdown:="'1'" \
+  -p Odom/GuessMotion:="'true'" \
+  -p OdomF2M/MaxSize:="'1000'" \
+  -p Vis/MinInliers:="'25'" \
+  -p Vis/InlierDistance:="'0.05'" \
+  -p Vis/MaxFeatures:="'1000'" \
+  -p RGBD/OptimizeMaxError:="'2.0'" \
+  -r rgb/image:=/camera/d455/color/image_raw \
+  -r depth/image:=/camera/d455/aligned_depth_to_color/image_raw \
+  -r rgb/camera_info:=/camera/d455/color/camera_info \
+  -r odom:=/vio/odometry
+
+
+IMPORTANT RTAB-MAP PARAMETER FIX:
+
+RTAB-Map parameters like Odom/ResetCountdown must be passed as strings in ROS 2.
+
+Wrong:
+-p Odom/ResetCountdown:=1
+
+Correct:
+-p Odom/ResetCountdown:="'1'"
+
+Same style used for:
+-p Odom/Strategy:="'0'"
+-p Vis/MinInliers:="'25'"
+-p Vis/InlierDistance:="'0.05'"
+-p OdomF2M/MaxSize:="'1000'"
+-p RGBD/OptimizeMaxError:="'2.0'"
+
+
+IMU FILTER CONTEXT:
+
+Raw D455 IMU initially produced messages without orientation, so RTAB-Map warned:
+
+Received IMU doesn't have orientation set! It is ignored.
+
+Fix:
+- Used imu_filter_madgwick.
+- It converts raw D455 gyro + accel into a filtered IMU message with orientation.
+- Output topic is:
+
+/camera/d455/imu_filtered
+
+Example valid filtered IMU output:
+
+frame_id: d455_imu_optical_frame
+
+orientation:
+  x: -0.44912196430789125
+  y: 0.45539837161533936
+  z: -0.5651797873655661
+  w: 0.521031277621346
+
+angular_velocity:
+  x: -0.0010646508308127522
+  y: 0.0
+  z: -0.0010646508308127522
+
+linear_acceleration:
+  x: 0.32361945509910583
+  y: -9.149603843688965
+  z: 1.7357770204544067
+
+This confirms orientation is now available and not all zeros.
+
+
+BENEFITS OF USING IMU WITH RTAB-MAP:
+
+- Better roll/pitch stability because accelerometer gives gravity direction.
+- Better initialization because odometry can start with gravity-aligned orientation.
+- Better during quick rotations or slight motion blur.
+- Less false translation during yaw/tilt rotation.
+- Better short-term orientation stability.
+- Useful for drone flight because odometry orientation is cleaner.
+
+Limitations:
+- It does not fully fix plain walls, plain floor, low texture, glass, sunlight, reflective surfaces, or long-term drift.
+- It does not make D455 equivalent to a dedicated full VIO sensor.
+- RGB-D still provides the main position estimate.
+
+
+VALIDATION RESULTS:
+
+RGB-D only stillness test:
+Initial pose:
+
+x: 0.033788152039051056
+y: -0.13532550632953644
+z: 0.058098554611206055
+
+After 2 minutes:
+
+x: 0.044106047600507736
+y: -0.09951258450746536
+z: 0.04110296070575714
+
+Drift:
+x drift around 1.0 cm
+y drift around 3.6 cm
+z drift around 1.7 cm
+total drift around 4 cm in 2 minutes
+
+Result:
+Stillness drift test: PASS
+
+
+RGB-D only 0.5 m movement test:
+After odometry reset, start pose:
+
+x: 0.00040935975266620517
+y: 0.00013775748084299266
+z: -0.0005753018194809556
+
+After moving D455 about 0.5 m:
+
+x: 0.4956493079662323
+y: -0.1407698392868042
+z: -0.07408614456653595
+
+Computed displacement:
+dx around 0.495 m
+dy around -0.141 m
+dz around -0.074 m
+total distance around 0.52 m
+
+Result:
+0.5 m movement scale test: PASS
+
+
+IMU-enabled stillness test:
+Start pose:
+
+x: -0.00548616424202919
+y: 0.0012211056891828775
+z: -0.0005230184178799391
+
+Later still pose:
+
+x: -0.0061815413646399975
+y: -0.0005221472820267081
+z: -0.0006339387618936598
+
+Drift:
+dx around -0.00069 m
+dy around -0.00174 m
+dz around -0.00011 m
+total drift around 0.00188 m
+
+Result:
+IMU-enabled stillness drift around 1.9 mm.
+This is better than RGB-D only, which was around 4 cm in 2 minutes.
+
+
+IMU-enabled 0.5 m movement test:
+Before movement:
+
+x: -0.0061815413646399975
+y: -0.0005221472820267081
+z: -0.0006339387618936598
+
+After movement:
+
+x: -0.12982015311717987
+y: -0.5214639902114868
+z: 0.0030989605002105236
+
+Computed displacement:
+dx around -0.1236 m
+dy around -0.5209 m
+dz around 0.0037 m
+total distance around 0.535 m
+
+Result:
+0.5 m movement scale test: PASS
+
+
+FINAL PHASE 1 STATUS:
+
+D455 RGB image: PASS
+D455 aligned depth: PASS
+D455 raw IMU: PASS
+Madgwick filtered IMU: PASS
+RTAB-Map RGB-D + IMU odometry: PASS
+/vio/odometry: PASS
+Stillness test: PASS
+0.5 m movement test: PASS
+
+Final decision:
+Use the IMU-enabled version.
+
+Final Phase 1 status:
+Phase 1: D455 RGB-D + IMU odometry setup complete.
+
+
+PHASE 1 PASS CONDITIONS:
+
+1. /vio/odometry publishes continuously
+2. Still camera drift is less than 5 cm in 2 minutes
+3. 0.5 m movement gives around 0.45 m to 0.60 m
+4. Slow yaw rotation does not create a big position jump
+5. System runs stable for 5 minutes
+
+Current result:
+- Still camera drift: around 1.9 mm
+- 0.5 m movement: around 0.535 m
+- Passed.
+
+
+CAUTION FOR FLIGHT:
+
+RGB-D odometry can fail in:
+- plain floor
+- plain wall
+- dark area
+- reflective surface
+- glass
+- sunlight
+- fast motion
+- vibration
+- low texture
+
+For better tracking, camera should see:
+- features
+- corners
+- texture
+- boxes
+- printed paper
+- posters
+- AprilTags or visual markers
+- non-reflective objects
+
+
+NEXT PHASE:
+
+Phase 2: Takeoff, Hover, and Land
+
+High-level Phase 2 flow:
+
+/vio/odometry
+        ↓
+MAVROS odometry input
+        ↓
+ArduPilot EKF3 ExternalNav
+        ↓
+GUIDED mode
+        ↓
+takeoff
+        ↓
+hover
+        ↓
+land
+
+Before motors/takeoff, first verify that Pixhawk receives external odometry correctly.
+
+Safety rule:
+Do not arm or takeoff unless /vio/odometry is healthy and ArduPilot EKF is accepting ExternalNav.
+
+Phase 2 will need:
+- MAVROS connection between Raspberry Pi and Pixhawk
+- ArduPilot EKF3 ExternalNav parameters
+- Bridge or remap from /vio/odometry to MAVROS odometry input
+- EKF origin/home setup if no GPS
+- Health checks before arming
+- VIO/odometry-gated takeoff node
+- Emergency land service
+
+
+CURRENT BEST NEXT STEP:
+
+Start Phase 2 safely:
+
+1. Connect Raspberry Pi to Pixhawk using USB first.
+2. Install and run MAVROS.
+3. Confirm /mavros/state connected: true.
+4. Configure ArduPilot EKF3 ExternalNav parameters.
+5. Bridge /vio/odometry to /mavros/odometry/in.
+6. Verify ArduPilot receives ExternalNav.
+7. Only after that, create takeoff-hover-land node.
+8. Do not perform motor test until ExternalNav is verified.
+

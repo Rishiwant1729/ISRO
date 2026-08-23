@@ -1,0 +1,27 @@
+[1.272s] Invoking command in '/home/ubuntu/irocu_ws/src/irocu_vio_bridge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ubuntu/irocu_ws/build/irocu_vio_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/irocu_vio_bridge build --build-base /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build install --record /home/ubuntu/irocu_ws/build/irocu_vio_bridge/install.log --single-version-externally-managed install_data
+[1.666s] running egg_info
+[1.696s] writing ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/PKG-INFO
+[1.696s] writing dependency_links to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/dependency_links.txt
+[1.698s] writing entry points to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/entry_points.txt
+[1.698s] writing requirements to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/requires.txt
+[1.699s] writing top-level names to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/top_level.txt
+[1.762s] reading manifest file '../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/SOURCES.txt'
+[1.763s] writing manifest file '../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/SOURCES.txt'
+[1.763s] running build
+[1.763s] running build_py
+[1.764s] copying irocu_vio_bridge/phase3_velocity_test.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[1.764s] running install
+[1.773s] running install_lib
+[1.803s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase3_velocity_test.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[1.804s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_velocity_test.py to phase3_velocity_test.cpython-312.pyc
+[1.809s] running install_data
+[1.809s] running install_egg_info
+[1.841s] removing '/home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge-0.0.0-py3.12.egg-info' (and everything under it)
+[1.841s] Copying ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge-0.0.0-py3.12.egg-info
+[1.842s] running install_scripts
+[2.044s] Installing ov_to_vio script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[2.045s] Installing phase2_health_check script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[2.046s] Installing phase2_takeoff_land script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[2.048s] Installing phase3_velocity_test script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[2.048s] writing list of installed files to '/home/ubuntu/irocu_ws/build/irocu_vio_bridge/install.log'
+[2.130s] Invoked command in '/home/ubuntu/irocu_ws/src/irocu_vio_bridge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ubuntu/irocu_ws/build/irocu_vio_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/irocu_vio_bridge build --build-base /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build install --record /home/ubuntu/irocu_ws/build/irocu_vio_bridge/install.log --single-version-externally-managed install_data

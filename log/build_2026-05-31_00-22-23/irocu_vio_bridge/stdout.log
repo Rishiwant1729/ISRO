@@ -1,0 +1,32 @@
+running develop
+Removing /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu-vio-bridge.egg-link (link to .)
+running egg_info
+writing ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/dependency_links.txt
+writing entry points to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/entry_points.txt
+writing requirements to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/requires.txt
+writing top-level names to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/top_level.txt
+reading manifest file '../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/SOURCES.txt'
+writing manifest file '../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build
+creating /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib
+creating /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+copying irocu_vio_bridge/ov_to_vio.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+copying irocu_vio_bridge/__init__.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+running install
+running install_lib
+creating /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/ov_to_vio.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/__init__.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/ov_to_vio.py to ov_to_vio.cpython-312.pyc
+byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/__init__.py to __init__.cpython-312.pyc
+running install_data
+copying resource/irocu_vio_bridge -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/share/ament_index/resource_index/packages
+copying package.xml -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/share/irocu_vio_bridge
+running install_egg_info
+Copying ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge-0.0.0-py3.12.egg-info
+running install_scripts
+Installing ov_to_vio script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+writing list of installed files to '/home/ubuntu/irocu_ws/build/irocu_vio_bridge/install.log'

@@ -1,0 +1,5 @@
+  File "/home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_lawnmower_aruco.py", line 1
+    import time import math import rclpy from rclpy.node import Node from rclpy.qos import QoSProfile, 
+                ^^^^^^
+SyntaxError: invalid syntax
+

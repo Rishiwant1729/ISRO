@@ -1,0 +1,85 @@
+[4.094s] Invoking command in '/home/ubuntu/irocu_ws/src/irocu_vio_bridge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ubuntu/irocu_ws/build/irocu_vio_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/irocu_vio_bridge build --build-base /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build install --record /home/ubuntu/irocu_ws/build/irocu_vio_bridge/install.log --single-version-externally-managed install_data
+[5.074s] running egg_info
+[5.074s] creating ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info
+[5.123s] writing ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/PKG-INFO
+[5.123s] writing dependency_links to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/dependency_links.txt
+[5.123s] writing entry points to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/entry_points.txt
+[5.124s] writing requirements to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/requires.txt
+[5.124s] writing top-level names to ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/top_level.txt
+[5.124s] writing manifest file '../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/SOURCES.txt'
+[5.239s] reading manifest file '../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/SOURCES.txt'
+[5.242s] writing manifest file '../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info/SOURCES.txt'
+[5.242s] running build
+[5.243s] running build_py
+[5.243s] creating /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build
+[5.243s] creating /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib
+[5.243s] creating /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.243s] copying irocu_vio_bridge/phase3_lawnmower_path.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.246s] copying irocu_vio_bridge/ov_to_vio.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.249s] copying irocu_vio_bridge/phase3_keyboard_rth_aruco_offset.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.250s] copying irocu_vio_bridge/phase3_square_path.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.254s] copying irocu_vio_bridge/__init__.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.254s] copying irocu_vio_bridge/phase3_keyboard_rth_aruco.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.256s] copying irocu_vio_bridge/phase2_health_check.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.259s] copying irocu_vio_bridge/phase3_aruco_detector.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.259s] copying irocu_vio_bridge/phase3_velocity_test.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.262s] copying irocu_vio_bridge/phase3_square_yaw_hold.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.263s] copying irocu_vio_bridge/phase2_takeoff_land.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.265s] copying irocu_vio_bridge/phase3_aruco_detector_custom.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.265s] copying irocu_vio_bridge/phase3_keyboard_rth.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.268s] copying irocu_vio_bridge/phase3_keyboard_control.py -> /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge
+[5.269s] running install
+[5.281s] running install_lib
+[5.366s] creating /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.366s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase3_lawnmower_path.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.366s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/ov_to_vio.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.366s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase3_keyboard_rth_aruco_offset.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.367s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase3_square_path.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.367s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/__init__.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.367s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase3_keyboard_rth_aruco.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.367s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase2_health_check.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.367s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase3_aruco_detector.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.367s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase3_velocity_test.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.367s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase3_square_yaw_hold.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.370s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase2_takeoff_land.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.371s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase3_aruco_detector_custom.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.371s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase3_keyboard_rth.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.372s] copying /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build/lib/irocu_vio_bridge/phase3_keyboard_control.py -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge
+[5.372s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_lawnmower_path.py to phase3_lawnmower_path.cpython-312.pyc
+[5.395s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/ov_to_vio.py to ov_to_vio.cpython-312.pyc
+[5.396s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_keyboard_rth_aruco_offset.py to phase3_keyboard_rth_aruco_offset.cpython-312.pyc
+[5.422s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_square_path.py to phase3_square_path.cpython-312.pyc
+[5.427s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/__init__.py to __init__.cpython-312.pyc
+[5.427s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_keyboard_rth_aruco.py to phase3_keyboard_rth_aruco.cpython-312.pyc
+[5.447s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase2_health_check.py to phase2_health_check.cpython-312.pyc
+[5.452s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_aruco_detector.py to phase3_aruco_detector.cpython-312.pyc
+[5.465s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_velocity_test.py to phase3_velocity_test.cpython-312.pyc
+[5.469s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_square_yaw_hold.py to phase3_square_yaw_hold.cpython-312.pyc
+[5.481s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase2_takeoff_land.py to phase2_takeoff_land.cpython-312.pyc
+[5.490s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_aruco_detector_custom.py to phase3_aruco_detector_custom.cpython-312.pyc
+[5.497s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_keyboard_rth.py to phase3_keyboard_rth.cpython-312.pyc
+[5.521s] byte-compiling /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge/phase3_keyboard_control.py to phase3_keyboard_control.cpython-312.pyc
+[5.525s] running install_data
+[5.525s] creating /home/ubuntu/irocu_ws/install/irocu_vio_bridge/share/ament_index
+[5.526s] creating /home/ubuntu/irocu_ws/install/irocu_vio_bridge/share/ament_index/resource_index
+[5.526s] creating /home/ubuntu/irocu_ws/install/irocu_vio_bridge/share/ament_index/resource_index/packages
+[5.526s] copying resource/irocu_vio_bridge -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/share/ament_index/resource_index/packages
+[5.528s] copying package.xml -> /home/ubuntu/irocu_ws/install/irocu_vio_bridge/share/irocu_vio_bridge
+[5.529s] running install_egg_info
+[5.583s] Copying ../../build/irocu_vio_bridge/irocu_vio_bridge.egg-info to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu_vio_bridge-0.0.0-py3.12.egg-info
+[5.589s] running install_scripts
+[6.074s] Installing ov_to_vio script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.075s] Installing phase2_health_check script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.076s] Installing phase2_takeoff_land script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.076s] Installing phase3_aruco_detector script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.076s] Installing phase3_aruco_detector_custom script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.076s] Installing phase3_keyboard_control script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.076s] Installing phase3_keyboard_rth script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.076s] Installing phase3_keyboard_rth_aruco script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.076s] Installing phase3_keyboard_rth_aruco_offset script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.077s] Installing phase3_lawnmower_path script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.077s] Installing phase3_square_path script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.081s] Installing phase3_square_yaw_hold script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.084s] Installing phase3_velocity_test script to /home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[6.085s] writing list of installed files to '/home/ubuntu/irocu_ws/build/irocu_vio_bridge/install.log'
+[6.257s] Invoked command in '/home/ubuntu/irocu_ws/src/irocu_vio_bridge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ubuntu/irocu_ws/build/irocu_vio_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/irocu_ws/install/irocu_vio_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/irocu_vio_bridge build --build-base /home/ubuntu/irocu_ws/build/irocu_vio_bridge/build install --record /home/ubuntu/irocu_ws/build/irocu_vio_bridge/install.log --single-version-externally-managed install_data

@@ -1,0 +1,5 @@
+{
+  "start_mission": "",
+  "stop_land": "export PYTHONNOUSERSITE=1; source /opt/ros/jazzy/setup.bash; source ~/irocu_ws/install/setup.bash; ros2 service call /mavros/set_mode mavros_msgs/srv/SetMode \"{base_mode: 0, custom_mode: 'land'}\"",
+  "start_image_sender": ""
+}

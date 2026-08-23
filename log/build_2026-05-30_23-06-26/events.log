@@ -1,0 +1,78 @@
+[0.000000] (-) TimerEvent: {}
+[0.002704] (-) JobUnselected: {'identifier': 'irocu_vio_bridge'}
+[0.002796] (irocu_phase2) JobQueued: {'identifier': 'irocu_phase2', 'dependencies': OrderedDict()}
+[0.002826] (irocu_phase2) JobStarted: {'identifier': 'irocu_phase2'}
+[0.099754] (-) TimerEvent: {}
+[0.200381] (-) TimerEvent: {}
+[0.300886] (-) TimerEvent: {}
+[0.401212] (-) TimerEvent: {}
+[0.501547] (-) TimerEvent: {}
+[0.603934] (-) TimerEvent: {}
+[0.704307] (-) TimerEvent: {}
+[0.804642] (-) TimerEvent: {}
+[0.904981] (-) TimerEvent: {}
+[1.005280] (-) TimerEvent: {}
+[1.105594] (-) TimerEvent: {}
+[1.205959] (-) TimerEvent: {}
+[1.306445] (-) TimerEvent: {}
+[1.406906] (-) TimerEvent: {}
+[1.507265] (-) TimerEvent: {}
+[1.607597] (-) TimerEvent: {}
+[1.707904] (-) TimerEvent: {}
+[1.809173] (-) TimerEvent: {}
+[1.909509] (-) TimerEvent: {}
+[2.009820] (-) TimerEvent: {}
+[2.110139] (-) TimerEvent: {}
+[2.210444] (-) TimerEvent: {}
+[2.310826] (-) TimerEvent: {}
+[2.411281] (-) TimerEvent: {}
+[2.417859] (irocu_phase2) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/irocu_phase2', 'build', '--build-base', '/home/ubuntu/irocu_ws/build/irocu_phase2/build', 'install', '--record', '/home/ubuntu/irocu_ws/build/irocu_phase2/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ubuntu/irocu_ws/src/irocu_phase2', 'env': {'USER': 'ubuntu', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ubuntu/drone_ws/install/px4_msgs/lib:/home/ubuntu/ros2_ws/install/realsense2_camera/lib:/home/ubuntu/ros2_ws/install/realsense2_camera_msgs/lib:/home/ubuntu/ros2_ws/install/ov_msckf/lib:/home/ubuntu/ros2_ws/install/ov_init/lib:/home/ubuntu/ros2_ws/install/ov_eval/lib:/home/ubuntu/ros2_ws/install/ov_core/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu/irocu_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1546', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ubuntu/drone_ws/install:/home/ubuntu/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ubuntu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/ubuntu/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/isro:@/tmp/.ICE-unix/1514,unix/isro:/tmp/.ICE-unix/1514', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/5f80b3c9_1951_47db_bcdc_cf5cd4e88fec', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.8BNTP3', 'GNOME_TERMINAL_SERVICE': ':1.120', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/ubuntu/drone_ws/install/px4_vio_control:/home/ubuntu/drone_ws/install/px4_msgs:/home/ubuntu/ros2_ws/install/realsense2_rviz_plugin:/home/ubuntu/ros2_ws/install/realsense2_ros_mqtt_bridge:/home/ubuntu/ros2_ws/install/realsense2_description:/home/ubuntu/ros2_ws/install/realsense2_camera:/home/ubuntu/ros2_ws/install/realsense2_camera_msgs:/home/ubuntu/ros2_ws/install/ov_msckf:/home/ubuntu/ros2_ws/install/ov_init:/home/ubuntu/ros2_ws/install/ov_eval:/home/ubuntu/ros2_ws/install/ov_data:/home/ubuntu/ros2_ws/install/ov_core:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ubuntu/irocu_ws/build/irocu_phase2', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/ubuntu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/irocu_ws/build/irocu_phase2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/irocu_ws/install/irocu_phase2/lib/python3.12/site-packages:/home/ubuntu/drone_ws/install/px4_vio_control/lib/python3.12/site-packages:/home/ubuntu/drone_ws/install/px4_msgs/lib/python3.12/site-packages:/home/ubuntu/ros2_ws/build/realsense2_ros_mqtt_bridge:/home/ubuntu/ros2_ws/install/realsense2_ros_mqtt_bridge/lib/python3.12/site-packages:/home/ubuntu/ros2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/ubuntu/drone_ws/install/px4_msgs:/home/ubuntu/ros2_ws/install/realsense2_rviz_plugin:/home/ubuntu/ros2_ws/install/realsense2_description:/home/ubuntu/ros2_ws/install/realsense2_camera:/home/ubuntu/ros2_ws/install/realsense2_camera_msgs:/home/ubuntu/ros2_ws/install/ov_msckf:/home/ubuntu/ros2_ws/install/ov_init:/home/ubuntu/ros2_ws/install/ov_eval:/home/ubuntu/ros2_ws/install/ov_data:/home/ubuntu/ros2_ws/install/ov_core:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[2.511404] (-) TimerEvent: {}
+[2.611713] (-) TimerEvent: {}
+[2.712061] (-) TimerEvent: {}
+[2.812381] (-) TimerEvent: {}
+[2.912793] (-) TimerEvent: {}
+[2.924964] (irocu_phase2) StdoutLine: {'line': b'running egg_info\n'}
+[2.925610] (irocu_phase2) StdoutLine: {'line': b'creating ../../build/irocu_phase2/irocu_phase2.egg-info\n'}
+[2.968348] (irocu_phase2) StdoutLine: {'line': b'writing ../../build/irocu_phase2/irocu_phase2.egg-info/PKG-INFO\n'}
+[2.969332] (irocu_phase2) StdoutLine: {'line': b'writing dependency_links to ../../build/irocu_phase2/irocu_phase2.egg-info/dependency_links.txt\n'}
+[2.969565] (irocu_phase2) StdoutLine: {'line': b'writing entry points to ../../build/irocu_phase2/irocu_phase2.egg-info/entry_points.txt\n'}
+[2.969662] (irocu_phase2) StdoutLine: {'line': b'writing requirements to ../../build/irocu_phase2/irocu_phase2.egg-info/requires.txt\n'}
+[2.969744] (irocu_phase2) StdoutLine: {'line': b'writing top-level names to ../../build/irocu_phase2/irocu_phase2.egg-info/top_level.txt\n'}
+[2.969821] (irocu_phase2) StdoutLine: {'line': b"writing manifest file '../../build/irocu_phase2/irocu_phase2.egg-info/SOURCES.txt'\n"}
+[3.012885] (-) TimerEvent: {}
+[3.043484] (irocu_phase2) StdoutLine: {'line': b"reading manifest file '../../build/irocu_phase2/irocu_phase2.egg-info/SOURCES.txt'\n"}
+[3.044816] (irocu_phase2) StdoutLine: {'line': b"writing manifest file '../../build/irocu_phase2/irocu_phase2.egg-info/SOURCES.txt'\n"}
+[3.045034] (irocu_phase2) StdoutLine: {'line': b'running build\n'}
+[3.045143] (irocu_phase2) StdoutLine: {'line': b'running build_py\n'}
+[3.045286] (irocu_phase2) StdoutLine: {'line': b'creating /home/ubuntu/irocu_ws/build/irocu_phase2/build\n'}
+[3.045391] (irocu_phase2) StdoutLine: {'line': b'creating /home/ubuntu/irocu_ws/build/irocu_phase2/build/lib\n'}
+[3.045486] (irocu_phase2) StdoutLine: {'line': b'creating /home/ubuntu/irocu_ws/build/irocu_phase2/build/lib/irocu_phase2\n'}
+[3.045625] (irocu_phase2) StdoutLine: {'line': b'copying irocu_phase2/__init__.py -> /home/ubuntu/irocu_ws/build/irocu_phase2/build/lib/irocu_phase2\n'}
+[3.045791] (irocu_phase2) StdoutLine: {'line': b'copying irocu_phase2/vio_to_mavros_odom.py -> /home/ubuntu/irocu_ws/build/irocu_phase2/build/lib/irocu_phase2\n'}
+[3.045964] (irocu_phase2) StdoutLine: {'line': b'running install\n'}
+[3.055800] (irocu_phase2) StdoutLine: {'line': b'running install_lib\n'}
+[3.089521] (irocu_phase2) StdoutLine: {'line': b'creating /home/ubuntu/irocu_ws/install/irocu_phase2/lib/python3.12/site-packages/irocu_phase2\n'}
+[3.089940] (irocu_phase2) StdoutLine: {'line': b'copying /home/ubuntu/irocu_ws/build/irocu_phase2/build/lib/irocu_phase2/__init__.py -> /home/ubuntu/irocu_ws/install/irocu_phase2/lib/python3.12/site-packages/irocu_phase2\n'}
+[3.090192] (irocu_phase2) StdoutLine: {'line': b'copying /home/ubuntu/irocu_ws/build/irocu_phase2/build/lib/irocu_phase2/vio_to_mavros_odom.py -> /home/ubuntu/irocu_ws/install/irocu_phase2/lib/python3.12/site-packages/irocu_phase2\n'}
+[3.092084] (irocu_phase2) StdoutLine: {'line': b'byte-compiling /home/ubuntu/irocu_ws/install/irocu_phase2/lib/python3.12/site-packages/irocu_phase2/__init__.py to __init__.cpython-312.pyc\n'}
+[3.092876] (irocu_phase2) StdoutLine: {'line': b'byte-compiling /home/ubuntu/irocu_ws/install/irocu_phase2/lib/python3.12/site-packages/irocu_phase2/vio_to_mavros_odom.py to vio_to_mavros_odom.cpython-312.pyc\n'}
+[3.093991] (irocu_phase2) StdoutLine: {'line': b'running install_data\n'}
+[3.094141] (irocu_phase2) StdoutLine: {'line': b'creating /home/ubuntu/irocu_ws/install/irocu_phase2/share/ament_index\n'}
+[3.094265] (irocu_phase2) StdoutLine: {'line': b'creating /home/ubuntu/irocu_ws/install/irocu_phase2/share/ament_index/resource_index\n'}
+[3.094375] (irocu_phase2) StdoutLine: {'line': b'creating /home/ubuntu/irocu_ws/install/irocu_phase2/share/ament_index/resource_index/packages\n'}
+[3.094488] (irocu_phase2) StdoutLine: {'line': b'copying resource/irocu_phase2 -> /home/ubuntu/irocu_ws/install/irocu_phase2/share/ament_index/resource_index/packages\n'}
+[3.094598] (irocu_phase2) StdoutLine: {'line': b'copying package.xml -> /home/ubuntu/irocu_ws/install/irocu_phase2/share/irocu_phase2\n'}
+[3.094716] (irocu_phase2) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.112981] (-) TimerEvent: {}
+[3.130965] (irocu_phase2) StdoutLine: {'line': b'Copying ../../build/irocu_phase2/irocu_phase2.egg-info to /home/ubuntu/irocu_ws/install/irocu_phase2/lib/python3.12/site-packages/irocu_phase2-0.0.0-py3.12.egg-info\n'}
+[3.132520] (irocu_phase2) StdoutLine: {'line': b'running install_scripts\n'}
+[3.213095] (-) TimerEvent: {}
+[3.314391] (-) TimerEvent: {}
+[3.380113] (irocu_phase2) StdoutLine: {'line': b'Installing vio_to_mavros_odom script to /home/ubuntu/irocu_ws/install/irocu_phase2/lib/irocu_phase2\n'}
+[3.380567] (irocu_phase2) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/irocu_ws/build/irocu_phase2/install.log'\n"}
+[3.414539] (-) TimerEvent: {}
+[3.502935] (irocu_phase2) CommandEnded: {'returncode': 0}
+[3.514631] (-) TimerEvent: {}
+[3.538869] (irocu_phase2) JobEnded: {'identifier': 'irocu_phase2', 'rc': 0}
+[3.540040] (-) EventReactorShutdown: {}
