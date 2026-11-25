@@ -1,3 +1,3 @@
 # generated from colcon_powershell/shell/template/hook_prepend_value.ps1.em
 
-colcon_prepend_unique_value PYTHONPATH "$env:COLCON_CURRENT_PREFIX//home/ubuntu/irocu_ws/build/irocu_vio_bridge"
+colcon_prepend_unique_value PYTHONPATH "$env:COLCON_CURRENT_PREFIX//home/ubuntu/isro_final/build/irocu_vio_bridge"

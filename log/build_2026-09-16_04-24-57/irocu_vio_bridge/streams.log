@@ -1,0 +1,37 @@
+[2.316s] Invoking command in '/home/ubuntu/isro_final/build/irocu_vio_bridge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ubuntu/isro_final/build/irocu_vio_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/isro_final/install/irocu_vio_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/isro_final/build/irocu_vio_bridge/build --no-deps symlink_data
+[2.800s] running develop
+[3.111s] running egg_info
+[3.140s] writing irocu_vio_bridge.egg-info/PKG-INFO
+[3.141s] writing dependency_links to irocu_vio_bridge.egg-info/dependency_links.txt
+[3.142s] writing entry points to irocu_vio_bridge.egg-info/entry_points.txt
+[3.142s] writing requirements to irocu_vio_bridge.egg-info/requires.txt
+[3.143s] writing top-level names to irocu_vio_bridge.egg-info/top_level.txt
+[3.204s] reading manifest file 'irocu_vio_bridge.egg-info/SOURCES.txt'
+[3.206s] writing manifest file 'irocu_vio_bridge.egg-info/SOURCES.txt'
+[3.240s] running build_ext
+[3.240s] Creating /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu-vio-bridge.egg-link (link to .)
+[3.241s] Installing control_server script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.242s] Installing dashboard_agent script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.242s] Installing downward_camera_publisher script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.242s] Installing image_capture_sender_node script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.242s] Installing image_capture_sender_topic_node script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.242s] Installing ov_to_vio script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.243s] Installing phase2_health_check script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.243s] Installing phase2_takeoff_land script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.243s] Installing phase3_aruco_detector script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.243s] Installing phase3_aruco_detector_custom script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.243s] Installing phase3_keyboard_control script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.243s] Installing phase3_keyboard_rth script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.244s] Installing phase3_keyboard_rth_aruco script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.244s] Installing phase3_keyboard_rth_aruco_offset script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.244s] Installing phase3_lawnmower_aruco script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.244s] Installing phase3_lawnmower_path script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.244s] Installing phase3_square_path script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.244s] Installing phase3_square_yaw_hold script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.245s] Installing phase3_velocity_test script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge
+[3.245s] 
+[3.245s] Installed /home/ubuntu/isro_final/build/irocu_vio_bridge
+[3.245s] running symlink_data
+[3.245s] creating /home/ubuntu/isro_final/install/irocu_vio_bridge/share/irocu_vio_bridge/launch
+[3.245s] symbolically linking /home/ubuntu/isro_final/build/irocu_vio_bridge/launch/vio_pipeline.launch.py -> /home/ubuntu/isro_final/install/irocu_vio_bridge/share/irocu_vio_bridge/launch
+[3.344s] Invoked command in '/home/ubuntu/isro_final/build/irocu_vio_bridge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ubuntu/isro_final/build/irocu_vio_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/isro_final/install/irocu_vio_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/isro_final/build/irocu_vio_bridge/build --no-deps symlink_data

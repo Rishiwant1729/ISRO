@@ -1,0 +1,78 @@
+[0.000000] (-) TimerEvent: {}
+[0.000433] (irocu_vio_bridge) JobQueued: {'identifier': 'irocu_vio_bridge', 'dependencies': OrderedDict()}
+[0.000750] (irocu_vio_bridge) JobStarted: {'identifier': 'irocu_vio_bridge'}
+[0.100310] (-) TimerEvent: {}
+[0.200637] (-) TimerEvent: {}
+[0.300956] (-) TimerEvent: {}
+[0.401274] (-) TimerEvent: {}
+[0.501616] (-) TimerEvent: {}
+[0.601923] (-) TimerEvent: {}
+[0.702223] (-) TimerEvent: {}
+[0.802521] (-) TimerEvent: {}
+[0.902807] (-) TimerEvent: {}
+[1.003096] (-) TimerEvent: {}
+[1.103402] (-) TimerEvent: {}
+[1.203702] (-) TimerEvent: {}
+[1.304026] (-) TimerEvent: {}
+[1.404494] (-) TimerEvent: {}
+[1.504847] (-) TimerEvent: {}
+[1.605199] (-) TimerEvent: {}
+[1.705483] (-) TimerEvent: {}
+[1.805770] (-) TimerEvent: {}
+[1.906080] (-) TimerEvent: {}
+[1.992209] (irocu_vio_bridge) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ubuntu/isro_final/build/irocu_vio_bridge/build', '--no-deps', 'symlink_data'], 'cwd': '/home/ubuntu/isro_final/build/irocu_vio_bridge', 'env': OrderedDict({'USER': 'ubuntu', 'SSH_CLIENT': '10.7.4.99 57091 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu/isro_final', 'SSH_TTY': '/dev/pts/2', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '16', 'PATH': '/home/ubuntu/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ubuntu/isro_final/build/irocu_vio_bridge', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.7.4.99 57091 10.7.15.233 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/ubuntu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/isro_final/build/irocu_vio_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/isro_final/install/irocu_vio_bridge/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[2.006197] (-) TimerEvent: {}
+[2.106502] (-) TimerEvent: {}
+[2.206787] (-) TimerEvent: {}
+[2.307069] (-) TimerEvent: {}
+[2.407375] (-) TimerEvent: {}
+[2.507669] (-) TimerEvent: {}
+[2.520315] (irocu_vio_bridge) StdoutLine: {'line': b'running develop\n'}
+[2.607763] (-) TimerEvent: {}
+[2.708040] (-) TimerEvent: {}
+[2.808336] (-) TimerEvent: {}
+[2.859210] (irocu_vio_bridge) StdoutLine: {'line': b'running egg_info\n'}
+[2.859478] (irocu_vio_bridge) StdoutLine: {'line': b'creating irocu_vio_bridge.egg-info\n'}
+[2.891375] (irocu_vio_bridge) StdoutLine: {'line': b'writing irocu_vio_bridge.egg-info/PKG-INFO\n'}
+[2.891719] (irocu_vio_bridge) StdoutLine: {'line': b'writing dependency_links to irocu_vio_bridge.egg-info/dependency_links.txt\n'}
+[2.892237] (irocu_vio_bridge) StdoutLine: {'line': b'writing entry points to irocu_vio_bridge.egg-info/entry_points.txt\n'}
+[2.892418] (irocu_vio_bridge) StdoutLine: {'line': b'writing requirements to irocu_vio_bridge.egg-info/requires.txt\n'}
+[2.892541] (irocu_vio_bridge) StdoutLine: {'line': b'writing top-level names to irocu_vio_bridge.egg-info/top_level.txt\n'}
+[2.892675] (irocu_vio_bridge) StdoutLine: {'line': b"writing manifest file 'irocu_vio_bridge.egg-info/SOURCES.txt'\n"}
+[2.908434] (-) TimerEvent: {}
+[2.957809] (irocu_vio_bridge) StdoutLine: {'line': b"reading manifest file 'irocu_vio_bridge.egg-info/SOURCES.txt'\n"}
+[2.958842] (irocu_vio_bridge) StdoutLine: {'line': b"writing manifest file 'irocu_vio_bridge.egg-info/SOURCES.txt'\n"}
+[2.991201] (irocu_vio_bridge) StdoutLine: {'line': b'running build_ext\n'}
+[2.995285] (irocu_vio_bridge) StdoutLine: {'line': b'Creating /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/python3.12/site-packages/irocu-vio-bridge.egg-link (link to .)\n'}
+[2.996379] (irocu_vio_bridge) StdoutLine: {'line': b'Installing control_server script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.996644] (irocu_vio_bridge) StdoutLine: {'line': b'Installing dashboard_agent script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.996801] (irocu_vio_bridge) StdoutLine: {'line': b'Installing downward_camera_publisher script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.996960] (irocu_vio_bridge) StdoutLine: {'line': b'Installing image_capture_sender_node script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.997109] (irocu_vio_bridge) StdoutLine: {'line': b'Installing image_capture_sender_topic_node script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.997266] (irocu_vio_bridge) StdoutLine: {'line': b'Installing ov_to_vio script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.997404] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase2_health_check script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.997539] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase2_takeoff_land script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.997671] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_aruco_detector script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.997824] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_aruco_detector_custom script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.997989] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_keyboard_control script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.998109] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_keyboard_rth script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.998377] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_keyboard_rth_aruco script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.998549] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_keyboard_rth_aruco_offset script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.998702] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_lawnmower_aruco script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.998865] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_lawnmower_path script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.999018] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_square_path script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.999165] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_square_yaw_hold script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.999327] (irocu_vio_bridge) StdoutLine: {'line': b'Installing phase3_velocity_test script to /home/ubuntu/isro_final/install/irocu_vio_bridge/lib/irocu_vio_bridge\n'}
+[2.999625] (irocu_vio_bridge) StdoutLine: {'line': b'\n'}
+[2.999712] (irocu_vio_bridge) StdoutLine: {'line': b'Installed /home/ubuntu/isro_final/build/irocu_vio_bridge\n'}
+[2.999819] (irocu_vio_bridge) StdoutLine: {'line': b'running symlink_data\n'}
+[2.999924] (irocu_vio_bridge) StdoutLine: {'line': b'creating /home/ubuntu/isro_final/install/irocu_vio_bridge/share/ament_index\n'}
+[3.000042] (irocu_vio_bridge) StdoutLine: {'line': b'creating /home/ubuntu/isro_final/install/irocu_vio_bridge/share/ament_index/resource_index\n'}
+[3.000184] (irocu_vio_bridge) StdoutLine: {'line': b'creating /home/ubuntu/isro_final/install/irocu_vio_bridge/share/ament_index/resource_index/packages\n'}
+[3.000325] (irocu_vio_bridge) StdoutLine: {'line': b'symbolically linking /home/ubuntu/isro_final/build/irocu_vio_bridge/resource/irocu_vio_bridge -> /home/ubuntu/isro_final/install/irocu_vio_bridge/share/ament_index/resource_index/packages\n'}
+[3.000449] (irocu_vio_bridge) StdoutLine: {'line': b'symbolically linking /home/ubuntu/isro_final/build/irocu_vio_bridge/package.xml -> /home/ubuntu/isro_final/install/irocu_vio_bridge/share/irocu_vio_bridge\n'}
+[3.008564] (-) TimerEvent: {}
+[3.100464] (irocu_vio_bridge) CommandEnded: {'returncode': 0}
+[3.108765] (-) TimerEvent: {}
+[3.117812] (irocu_vio_bridge) JobEnded: {'identifier': 'irocu_vio_bridge', 'rc': 0}
+[3.118672] (-) EventReactorShutdown: {}
